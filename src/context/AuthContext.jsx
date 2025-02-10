@@ -13,6 +13,8 @@ export const AuthProvider = ({ children }) => {
     if (storedUser) {
       setIsLoggedIn(true);
       setUserData(JSON.parse(storedUser));
+    } else {
+      navigate("/");
     }
   }, []);
 
